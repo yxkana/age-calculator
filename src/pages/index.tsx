@@ -1,5 +1,4 @@
-import Head from "next/head";
-import Link from "next/link";
+
 import Image from "next/image";
 import { FormEvent, SetStateAction, useState } from "react";
 import dayjs from "dayjs";
@@ -21,14 +20,14 @@ export default function Home() {
 
   const [isCalculate, setIsCalculate] = useState(false);
 
-  let date = day + "/" + month + "/" + year;
+ const date = day + "/" + month + "/" + year;
 
   const givenDate = new Date(
     parseInt(year),
     parseInt(month) - 1,
     parseInt(day)
   );
-  let currentDate = new Date();
+  const currentDate = new Date();
   const currentYear = new Date().getFullYear();
 
   function calculateAge(
@@ -39,13 +38,13 @@ export default function Home() {
   ) {
     event.preventDefault();
     setIsCalculate(true);
-    let date = day + "/" + month + "/" + year;
-    let currentDate = new Date();
+    const date = day + "/" + month + "/" + year;
+    const currentDate = new Date();
 
     if (dayjs(date, "DD/MM/YYYY", true).isValid()) {
-      var _date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+      const _date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
 
-      var calculatedMils = Math.abs(currentDate.valueOf() - _date.valueOf());
+      const calculatedMils = Math.abs(currentDate.valueOf() - _date.valueOf());
 
       const { years, months, days } = calculateYearsMonthsDays(calculatedMils);
 
