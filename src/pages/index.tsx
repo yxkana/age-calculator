@@ -224,7 +224,7 @@ export default function Home() {
           </button>
         </div>
         {/* Results */}
-        <div className="flex flex-col xl:relative xl:bottom-10 gap-2  px-5 text-[56px] italic xl:text-8xl">
+        <div className="flex flex-col xl:relative xl:bottom-10 gap-2  px-5 text-[56px] italic xl:text-[85px]">
           <div className="flex gap-3  font-bold leading-none">
             <p className="text-primary">{oldYear}</p>
             <p>years</p>
